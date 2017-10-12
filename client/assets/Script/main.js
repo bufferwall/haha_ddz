@@ -18,7 +18,13 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        //绑定点击事件
+        this.singleBtn.node.on('click', function (event) {
+            console.log('on click signleBtn');
+        }, this);
+        this.onlineBtn.node.on('click', function (event) {
+            console.log('on click onlineBtn');
+        }, this);
     },
 
     // called every frame, uncomment this function to activate update callback
