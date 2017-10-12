@@ -710,7 +710,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "New Label",
+    "_name": "title",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -799,14 +799,18 @@
     "_fitHeight": true
   },
   {
-    "__type__": "280c3rsZJJKnZ9RqbALVwtK",
+    "__type__": "e487aaplYBMSpk2Ba/Ca14C",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "label": null,
-    "text": "Hello, World!"
+    "singleBtn": {
+      "__id__": 16
+    },
+    "onlineBtn": {
+      "__id__": 11
+    }
   }
 ]
