@@ -1,26 +1,24 @@
-cc.Class({
-    extends: cc.Component,
+class Player {
+    constructor (name = Date.now()) {
+        this.name = name;
+        this.isLandloard = false;
+        this.isAI = false;
+        this.cardList = [];
+        this.isReady = false;
+        this.isLeave = false;
+        this.score = 0;
 
-    properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
-    },
+        Object.defineProperty(this, 'score', {
+            get: () => {
+                console.log(this.name, 'get score', this.score);
+                return this.score;
+            },
+            set: (val) => {
+                console.log(this.name, 'set score', this.score);
+                this.score = val;
+            }
+        })
+    }
+};
 
-    // use this for initialization
-    onLoad: function () {
-
-    },
-
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
-});
+module.exports = Player;
